@@ -1,0 +1,47 @@
+.daha_Daha {
+  width: 81px;
+  height: 40px;
+}
+.oval {
+  width: 40px;
+  height: 40px;
+  background: #1d1e1c;
+  border-radius: 50%;
+}
+.rectangle {
+  width: 91px;
+  height: 40px;
+  border-radius: 20px;
+  background: #f40000;
+  border-color: transparent;
+}
+.giriYap {
+  width: 71px;
+  height: 20px;
+  color: #ffffff;
+  font-family: "TCCC-UnityHeadline-Bold";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: -0.17142858px;
+}
+.profile {
+  width: 16px;
+  height: 17px;
+  background: transparent;
+  margin: auto;
+  padding: 10px;
+}
+.profileContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 141px;
+  height: 40px;
+}
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

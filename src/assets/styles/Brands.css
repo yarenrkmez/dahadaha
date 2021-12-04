@@ -1,0 +1,82 @@
+.brand_Tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 8px;
+  padding: 6px 9.2px 6px 6px;
+  border: 1px solid var(--gray);
+  cursor: pointer;
+}
+
+.opportunityContainer {
+  height: 36px;
+  border-radius: 8px;
+  border: solid 1px #eceeef;
+  background: #ffffff;
+  margin: 5px;
+}
+
+.brandName {
+  display: block;
+  font-family: Gotham;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 10px;
+  color: var(--black);
+  padding: 5px 2px;
+}
+
+.sh_bg {
+  width: 24px;
+  height: 24px;
+  border-radius: 7.2px;
+  background: #f40000;
+  display: flex;
+  flex-direction: row;
+}
+
+.shape {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  margin: auto;
+}
+.opportunityInside {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 5px;
+}
+.opportunitiesContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  overflow-x: auto;
+  padding: 0 5%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
