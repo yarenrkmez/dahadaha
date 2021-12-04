@@ -76,3 +76,52 @@
     height: 383px;
   }
 }
+.opportunityItemText {
+  display: flex;
+  color: #1d1e1c;
+  font-family: "TCCC-UnityHeadline-Bold";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.21538462px;
+  margin-top: 5px;
+}
+.opportunityItemButton {
+  display: flex;
+  color: #f40000;
+  font-family: "TCCC-UnityHeadline-Bold";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  margin-top: 5px;
+}
+.opportunityItemButtonAndTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opportunityItemRemainingTimeTextContainer {
+  display: flex;
+  width: 97px;
+  height: 32px;
+  border-radius: 26.82px;
+  background: #1d1e1c;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.opportunityItemRemainingTimeTextContainer span {
+  color: white;
+  font-family: "TCCC-UnityHeadline-Regular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.5416667px;
+}

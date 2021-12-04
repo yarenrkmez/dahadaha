@@ -2,6 +2,8 @@ import React, { ReactElement } from 'react'
 import opportunityMedia from '../../assets/images/cocaColaOpportunity.png'
 import '../../assets/styles/Opportunities.css'
 import colaCircle from '../../assets/images/colaCircle.png'
+import PrimaryButton from '../Buttons/PrimaryButton'
+import { text } from '../../constants/titles'
 
 interface Props {
 
@@ -21,13 +23,25 @@ function OpportunityItem({ }: Props): ReactElement {
             <div className="opportunityItemContainer">
 
                 <div className="opportunityItemMediaContainer">
-                    <img src={opportunityMedia}  />
+
+                    <img src={opportunityMedia} />
+
+                    <div className="opportunityItemRemainingTimeTextContainer">
+                        <span >son 6 gün</span>
+                    </div>
+
                     <div>
                         <img src={colaCircle} className="circleLogo" />
                     </div>
                 </div>
-                <span>2,5 LT Coca-Cola kapakları
-                    Coca-Cola +Coffee kazandırıyor!</span>
+
+                <div className="opportunityItemButtonAndTitle">
+                    <span className="opportunityItemText">2,5 LT Coca-Cola kapakları
+                        Coca-Cola +Coffee kazandırıyor!</span>
+
+                    <PrimaryButton title={text.dahadaha} className="opportunityItemButton" />
+                </div>
+
             </div>
         </div>
 
