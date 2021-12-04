@@ -7,6 +7,10 @@
   height: 40px;
   background: #1d1e1c;
   border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .rectangle {
   width: 91px;
@@ -31,7 +35,6 @@
   height: 17px;
   background: transparent;
   margin: auto;
-  padding: 10px;
 }
 .profileContainer {
   display: flex;
@@ -43,5 +46,10 @@
 .navbarContainer {
   display: flex;
   flex-direction: row;
+  position: relative;
   justify-content: space-between;
+  width: 100vw;
+  padding: 1.25rem 0.9375rem 0.9375rem;
+  box-sizing: border-box;
+  max-width: 1440px;
 }

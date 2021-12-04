@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.opportunityContainer {
+.brandContainer {
   height: 36px;
   border-radius: 8px;
   border: solid 1px #eceeef;
@@ -52,7 +52,7 @@
   margin: auto;
   padding: 5px;
 }
-.opportunitiesContainer {
+.brandsContainer {
   position: relative;
   display: flex;
   align-items: center;

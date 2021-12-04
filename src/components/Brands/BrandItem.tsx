@@ -10,7 +10,7 @@ type Props = {
 
 function OpportunityItem({ brandIcon, brandText, brandIconStyle }: Props): ReactElement {
     return (
-        <div className="opportunityContainer">
+        <div className="brandContainer">
             <div className="brand_Tag" >
 
                 <div className={brandText === text.findOpportunity ? "sh_bg" : ""}>

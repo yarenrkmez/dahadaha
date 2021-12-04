@@ -13,7 +13,7 @@ interface Props {
 
 function Opportunity({ }: Props): ReactElement {
     return (
-        <div className="opportunitiesContainer">
+        <div className="brandsContainer">
             <BrandItem
                 brandIcon={shape}
                 brandText={text.findOpportunity}
