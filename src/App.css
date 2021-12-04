@@ -1,0 +1,17 @@
+.App{
+    background: #dadada;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+}
+/* @media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+  } */

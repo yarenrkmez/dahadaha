@@ -1,0 +1,78 @@
+.opportunityItemContainer {
+  position: relative;
+  margin: -2px 6px;
+  width: 305px;
+  /* min-width: 70vw; */
+
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  height: 341px;
+  z-index: 3;
+  padding-top: 4px;
+}
+
+/* @media screen and (min-width: 600px) {
+    .opportunityItemContainer {
+        max-width: 255px;
+    }
+  } */
+
+.opportunityItemMedia {
+  width: 100%;
+}
+.opportunityItemMediaContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+.opportunityPath {
+  position: absolute;
+  margin: 0 5px;
+  z-index: 1;
+}
+.circleLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  border: 3px solid #fff;
+  padding: 3px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+/* .OpportunitiesContainer{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow-x: scroll;
+  height: 500px;
+} */
+@media screen and (min-width: 600px) {
+  .OpportunitiesContainer {
+    /* display: flex;
+    flex-direction: row;
+    background-color: blue;
+    flex-wrap: wrap;
+    align-items: center; */
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .OpportunitiesContainer {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    position: relative;
+    height: 383px;
+  }
+}
