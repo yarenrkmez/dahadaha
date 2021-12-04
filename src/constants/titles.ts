@@ -3,5 +3,7 @@ export const text={
 "findOpportunity":"Fırsat Bul",
 "burger_king":"Burger King",
 "sprite":"Sprite",
-"trendyol":"Trendyol"
+"trendyol":"Trendyol",
+"discover":"Keşfet",
+"dahaWallet":"Daha Cüzdan"
 }

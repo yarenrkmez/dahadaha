@@ -1,0 +1,62 @@
+@media screen and (max-width: 569px) {
+  .bottomNavbarContainer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: Unity, Gotham;
+    border-top-left-radius: 33px;
+    border-top-right-radius: 33px;
+    height: 10%;
+  }
+}
+
+@media screen and (min-width: 570px) {
+  .bottomNavbarContainer {
+    visibility: hidden;
+  }
+}
+
+.plusVectorButton {
+  position: absolute;
+  top: -10px;
+  background-color: #fff;
+  width: 69px;
+  height: 69px;
+  border-color: darkgreen yellow orange red;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 0 4px 2px hsl(0deg 0% 85% / 50%);
+  border-radius: 25px;
+}
+
+.discoverButton {
+  display: flex;
+  flex-direction: column-reverse;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+}
+
+.discoverButtonTitle {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: Unity, Gotham;
+  margin-top: 5px;
+}
+
+.starButton {
+    display: flex;
+    flex-direction: column-reverse;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    margin-bottom: 23px;
+  }
