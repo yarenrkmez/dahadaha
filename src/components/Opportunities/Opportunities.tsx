@@ -46,7 +46,7 @@ function Opportunities({ }: Props): ReactElement {
 
 
     let brandTagsOpportunities: Array<any> = []
-
+    // brandTagsOpportunities.includes(filterBrand)
      
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
