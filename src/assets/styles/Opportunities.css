@@ -125,3 +125,12 @@
   text-align: center;
   letter-spacing: -0.5416667px;
 }
+.oppImg {
+  /* width: 70vw;
+  max-height: 59vw; */
+  width: 297px;
+  height: 249px;
+  object-fit: cover;
+  border-radius: 18px;
+  border-bottom-left-radius: 80px;
+}
