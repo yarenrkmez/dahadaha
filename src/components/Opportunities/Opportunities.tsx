@@ -47,7 +47,7 @@ function Opportunities({ }: Props): ReactElement {
 
     let brandTagsOpportunities: Array<any> = []
     // brandTagsOpportunities.includes(filterBrand)
-     
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
             <div className="OpportunitiesContainer" ref={ref}>
@@ -57,10 +57,10 @@ function Opportunities({ }: Props): ReactElement {
                     item.BrandTags.forEach(item => {
                         brandTagsOpportunities.push(item.BrandName)
                     })
-
+                    let status = typeof (filterBrand) === 'number' ? true : brandTagsOpportunities.includes(filterBrand)
                     return (
-                        item.Status &&
-                            <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/?name=${item.PromotionName}/?id=${item.PromotionID}`)} />
+                        item.Status && status &&
+                        <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/?name=${item.PromotionName}/?id=${item.PromotionID}`)} />
                     )
 
                 })}
