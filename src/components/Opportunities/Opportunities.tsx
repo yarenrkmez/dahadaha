@@ -3,6 +3,8 @@ import SliderDots from '../SliderDots/SliderDots'
 import OpportunityItem from './OpportunityItem'
 import { getPromotions } from '../../api/Promotions'
 import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../redux/reducers/rootReducer";
 
 type Props = {
 }
@@ -38,32 +40,15 @@ type Promotions = {
 
 function Opportunities({ }: Props): ReactElement {
     const ref = useRef(null);
-    const [loading, setloading] = useState<boolean>(false)
-    const [promotions, setPromotions] = useState<Array<Promotions>>([])
-
+    const { opportunities } = useSelector((state: RootState) => state.opportunitiesReducer);
     let history = useHistory();
 
-    useEffect(() => {
-        getPromotionsFromApi();
-    }, []);
-
-    const getPromotionsFromApi = async () => {
-        setloading(true);
-        const getsPromotions = await getPromotions();
-        console.log(getsPromotions, "ksdfdls")
-        if (getsPromotions?.status === 200) {
-            setPromotions(getsPromotions?.data as any);
-            setloading(false);
-        }
-    };
-
-    if (loading) return <p>loaading..</p>
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
             <div className="OpportunitiesContainer" ref={ref}>
 
-                {promotions.map(item => {
+                {opportunities.length > 0 && opportunities.map((item: Promotions) => {
                     return (
                         item.Status && <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/${item.PromotionName}/${item.PromotionID}`)} />
                     )
