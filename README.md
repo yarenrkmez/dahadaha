@@ -1,1 +1,2 @@
 # dahadaha
+npm start
