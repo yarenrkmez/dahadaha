@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
 import opportunitiesReducer from './opportunitiesReducer';
+import brandsReducer from './brandsReducer';
 
 
 const allReducers = {
-  opportunitiesReducer
+  opportunitiesReducer,
+  brandsReducer
 };
 
 const rootReducer = combineReducers(allReducers);
