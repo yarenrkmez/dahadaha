@@ -65,7 +65,7 @@ function OpportunitySingle({ }: Props): ReactElement {
     const ReturnDescription = () => {
         return <div dangerouslySetInnerHTML={createMarkup()} />;
     }
-
+console.log(curretOpp,"kldasd")
 
     return (
         <div className="opportunitySingle">
@@ -87,10 +87,13 @@ function OpportunitySingle({ }: Props): ReactElement {
 
                 <div className="opportunityItemButtonAndTitle">
                     <span className="opportunityItemText">{curretOpp?.Title}</span>
-
-                    <ReturnDescription />
+                    <ReturnDescription />    
+                    < a target="_blank" className="DetailButton" href={curretOpp?.DetailUrl}>Kampanya detayları için tıkla</a>
+            
                 </div>
+                
             </div>
+          
             <div className="joinNowBtn">
                 <button>Hemen Katıl</button>
             </div>
