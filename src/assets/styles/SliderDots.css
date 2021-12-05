@@ -19,8 +19,9 @@
   border: none;
 }
 
-.sliderDot:focus {
+.sliderDotActive {
   width: 19px;
   border-radius: 10px;
   background-color: red;
+  border: none;
 }
