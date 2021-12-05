@@ -57,4 +57,10 @@ position: relative
     margin-right: 10px;
     margin-left: 10px;
 }
+.DetailButton{
+    margin-bottom: 50px;
+    border: none;
+    background-color: transparent;
+    
+}
 
