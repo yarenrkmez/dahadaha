@@ -1,21 +1,26 @@
-.sliderDotsContainer{
+@media screen and (max-width: 599px) {
+  .sliderDotsContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sliderDotsContainer {
+    visibility: hidden;
+  }
+}
+.sliderDot {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+  border-radius: 45%;
+  background-color: #d8d8d8;
+  border: none;
 }
 
-.sliderDot{
-    width: 9px;
-    height: 9px;
-    margin-right: 5px;
-    border-radius: 45%;
-    background-color: #d8d8d8;
-    border: none;
-
-}
-
-.sliderDot:focus{
-    width: 19px;
-    border-radius: 10px;
-    background-color: red;
+.sliderDot:focus {
+  width: 19px;
+  border-radius: 10px;
+  background-color: red;
 }

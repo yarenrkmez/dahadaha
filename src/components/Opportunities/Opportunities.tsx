@@ -2,9 +2,11 @@ import React, { ReactElement, useRef, useState, useEffect } from 'react'
 import SliderDots from '../SliderDots/SliderDots'
 import OpportunityItem from './OpportunityItem'
 import { getPromotions } from '../../api/Promotions'
+import { useHistory } from "react-router-dom";
 
 type Props = {
 }
+
 type Promotions = {
     PromotionID: string,
     PromotionName: string
@@ -39,6 +41,8 @@ function Opportunities({ }: Props): ReactElement {
     const [loading, setloading] = useState<boolean>(false)
     const [promotions, setPromotions] = useState<Array<Promotions>>([])
 
+    let history = useHistory();
+
     useEffect(() => {
         getPromotionsFromApi();
     }, []);
@@ -53,7 +57,7 @@ function Opportunities({ }: Props): ReactElement {
         }
     };
 
-if (loading) return <p>loaading..</p>
+    if (loading) return <p>loaading..</p>
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
@@ -61,14 +65,11 @@ if (loading) return <p>loaading..</p>
 
                 {promotions.map(item => {
                     return (
-                        < OpportunityItem key={item.PromotionID} data={item} />
+                        item.Status && <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/${item.PromotionName}/${item.PromotionID}`)} />
                     )
 
                 })}
 
-                {/* <OpportunityItem />
-                <OpportunityItem />
-                <OpportunityItem /> */}
             </div>
             <SliderDots
                 scrolllingViewRef={ref} />

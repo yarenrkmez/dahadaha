@@ -35,12 +35,11 @@ type Promotions = {
 }
 
 type Props = {
-
-    data: Promotions
-
+    data: Promotions;
+    onClick: () => void;
 }
 
-function OpportunityItem({ data }: Props): ReactElement {
+function OpportunityItem({ data, onClick }: Props): ReactElement {
 
     const returnRemainingDuration = () => {
         if (data.RemainingDuration.includes(".")) {
@@ -66,7 +65,7 @@ function OpportunityItem({ data }: Props): ReactElement {
     }
 
     return (
-        <div>
+        <div onClick={onClick} >
 
             <div className="opportunityPath">
                 <svg xmlns="http://www.w3.org/2000/svg" width="305" viewBox="0 0 305 367">
