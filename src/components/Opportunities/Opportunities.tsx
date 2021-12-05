@@ -1,18 +1,25 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useRef, useState, useEffect } from 'react'
+import SliderDots from '../SliderDots/SliderDots'
 import OpportunityItem from './OpportunityItem'
 
-interface Props {
-    
+type Props = {
 }
 
-function Opportunities({}: Props): ReactElement {
+function Opportunities({ }: Props): ReactElement {
+    const ref = useRef(null);
+
     return (
-        <div className="OpportunitiesContainer">
-            <OpportunityItem />
-            <OpportunityItem />
-            <OpportunityItem />
-            <OpportunityItem />
+        <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+            <div className="OpportunitiesContainer" ref={ref}>
+                <OpportunityItem />
+                <OpportunityItem />
+                <OpportunityItem />
+                <OpportunityItem />
+            </div>
+            <SliderDots
+                scrolllingViewRef={ref} />
         </div>
+
     )
 }
 

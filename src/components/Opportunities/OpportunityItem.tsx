@@ -1,15 +1,16 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useRef, useEffect } from 'react'
 import opportunityMedia from '../../assets/images/cocaColaOpportunity.png'
 import '../../assets/styles/Opportunities.css'
 import colaCircle from '../../assets/images/colaCircle.png'
 import PrimaryButton from '../Buttons/PrimaryButton'
 import { text } from '../../constants/titles'
 
-interface Props {
-
+type Props = {
 }
 
 function OpportunityItem({ }: Props): ReactElement {
+
+
     return (
         <div>
 

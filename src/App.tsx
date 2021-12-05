@@ -7,8 +7,8 @@ import BottomNavbar from './components/Navbar/BottomNavbar';
 
 function App() {
   return (
-    <div className="App">
-      <div style={{display:'flex',flexDirection:'column'}}>
+    <div className="App" id="App">
+      <div >
         <Navbar />
         <Brands />
         <Opportunities />
