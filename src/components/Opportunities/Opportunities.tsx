@@ -50,7 +50,7 @@ function Opportunities({ }: Props): ReactElement {
 
                 {opportunities.length > 0 && opportunities.map((item: Promotions) => {
                     return (
-                        item.Status && <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/${item.PromotionName}/${item.PromotionID}`)} />
+                        item.Status && <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/?name=${item.PromotionName}/?id=${item.PromotionID}`)} />
                     )
 
                 })}

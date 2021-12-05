@@ -4,6 +4,7 @@ import '../../assets/styles/Opportunities.css'
 import colaCircle from '../../assets/images/colaCircle.png'
 import PrimaryButton from '../Buttons/PrimaryButton'
 import { text } from '../../constants/titles'
+import { returnRemainingDuration } from '../../heplers/helperFunctions'
 
 type Promotions = {
     PromotionID: string,
@@ -41,29 +42,6 @@ type Props = {
 
 function OpportunityItem({ data, onClick }: Props): ReactElement {
 
-    const returnRemainingDuration = () => {
-        if (data.RemainingDuration.includes(".")) {
-            var d = new Date();
-            let endDate = data.RemainingDuration.split(".");
-            const currDate = d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
-            let endDateEdited = endDate[1] + '/' + endDate[0] + '/' + endDate[2]
-
-            const dateOne = new Date(endDateEdited);
-            const dateTwo = new Date(currDate);
-
-            const dateOneUTC = Date.UTC(dateOne.getFullYear(), dateOne.getMonth(), dateOne.getDate())
-            const dateTwoUTC = Date.UTC(dateTwo.getFullYear(), dateTwo.getMonth(), dateTwo.getDate())
-            const difference = dateOneUTC - dateTwoUTC
-
-
-            return `son ${difference / (1000 * 60 * 60 * 24)} gün`
-        }
-        else {
-            return data.RemainingDuration
-        }
-
-    }
-
     return (
         <div onClick={onClick} >
 
@@ -81,7 +59,7 @@ function OpportunityItem({ data, onClick }: Props): ReactElement {
                     <img src={data.ImgUrl} className="oppImg" />
 
                     <div className="opportunityItemRemainingTimeTextContainer">
-                        <span >{returnRemainingDuration()}</span>
+                        <span >{returnRemainingDuration(data)}</span>
                     </div>
 
                     <div>
@@ -90,7 +68,7 @@ function OpportunityItem({ data, onClick }: Props): ReactElement {
                 </div>
 
                 <div className="opportunityItemButtonAndTitle">
-                    <span className="opportunityItemText">{data.PromotionName}</span>
+                    <span className="opportunityItemText">{data.Title}</span>
 
                     <PrimaryButton title={text.dahadaha} className="opportunityItemButton" />
                 </div>
