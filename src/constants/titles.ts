@@ -6,5 +6,7 @@ export const text = {
     "trendyol": "Trendyol",
     "discover": "Keşfet",
     "dahaWallet": "Daha Cüzdan",
-    "dahadaha": "Daha Daha"
+    "dahadaha": "Daha Daha",
+    "cola":"Coca-Cola",
+    "YemekSepeti":"YemekSepeti"
 }

@@ -19,12 +19,6 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/kampanya" component={OpportunitySingle} />
-            {/* <Route
-            path="/users/:id"
-            render={({ match }) => (
-              <User id={match.params.id} />
-            )}
-          /> */}
           </Switch>
 
         </div>

@@ -3,4 +3,5 @@ export const opportunityActions = {
 };
 export const BrandActions = {
   SET_BRANDS: 'SET_BRANDS',
+  SET_FILTER_BRAND: 'SET_FILTER_BRAND'
 };

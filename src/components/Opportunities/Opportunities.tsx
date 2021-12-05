@@ -41,16 +41,26 @@ type Promotions = {
 function Opportunities({ }: Props): ReactElement {
     const ref = useRef(null);
     const { opportunities } = useSelector((state: RootState) => state.opportunitiesReducer);
+    const { filterBrand } = useSelector((state: RootState) => state.brandsReducer);
     let history = useHistory();
 
 
+    let brandTagsOpportunities: Array<any> = []
+
+     
     return (
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
             <div className="OpportunitiesContainer" ref={ref}>
 
                 {opportunities.length > 0 && opportunities.map((item: Promotions) => {
+                    brandTagsOpportunities = [];
+                    item.BrandTags.forEach(item => {
+                        brandTagsOpportunities.push(item.BrandName)
+                    })
+
                     return (
-                        item.Status && <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/?name=${item.PromotionName}/?id=${item.PromotionID}`)} />
+                        item.Status &&
+                            <OpportunityItem key={item.PromotionID} data={item} onClick={() => history.push(`kampanya/?name=${item.PromotionName}/?id=${item.PromotionID}`)} />
                     )
 
                 })}
